@@ -17,7 +17,7 @@
             <a href="dashboard_admin.php">
                 <img src="resources/4.png" alt="Dashboard Icon">Dashboard
             </a>
-            <a href="uBorrowRet_a.php">
+            <a href="aBorrowRet_a.php">
                 <img src="resources\5.png" alt="Borrow/Return Icon">Borrow/Return
             </a>
             <a href="book_catalog_admin.php">
