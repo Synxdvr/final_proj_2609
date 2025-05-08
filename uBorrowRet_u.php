@@ -16,13 +16,13 @@
       <a href="dashboard_user.php">
         <img src="resources/4.png" alt="Dashboard Icon">Dashboard
       </a>
-      <a href="path/to/uBorrowRet_a.php">
+      <a href="uBorrowRet_u.php">
   <img src="resources\5.png" alt="Borrow/Return Icon">Borrow/Return
 </a>
-      <a href="book_catalog_admin.php">
+      <a href="book_borrow_user.php">
         <img src="resources/6.png" alt="Catalog Icon">Book Catalog
       </a>
-      <a href="#">
+      <a href="account_user.php">
         <img src="resources/7.png" alt="Account Icon">Account
       </a>
     </nav>

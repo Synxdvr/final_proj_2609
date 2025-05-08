@@ -3,6 +3,7 @@ function insertBook() {
   const bookTitle = document.getElementById("book-title").value;
   const bookAuthor = document.getElementById("author").value;
 
+
   if (!bookId || !bookTitle || !bookAuthor) {
     Swal.fire({
       icon: "error",

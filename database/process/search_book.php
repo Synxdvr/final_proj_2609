@@ -15,21 +15,28 @@ $result = $conn->query($sql);
 
 $html = "";
 
-if ($result && $result->num_rows > 0) {
+echo '<link rel="stylesheet" type="text/css" href="styles.css">';
+
+if ($result->num_rows > 0) {
+    $html = '<table class="book-table">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody>';
+
     while ($row = $result->fetch_assoc()) {
-        $html .= '<div class="book-card">  <div class="book-header">
-                <h3>' . htmlspecialchars(ucfirst($row['book_title'])) . '</h3>
-                <small>By ' . htmlspecialchars(ucfirst($row['book_author'])) . '</small>
-            </div>
-            <div class="book-details">
-                <table>
-                    <tr><td><strong>Book ID</strong></td><td>' . $row['book_id'] . '</td></tr>
-                    <tr><td><strong>Title</strong></td><td>' . htmlspecialchars($row['book_title']) . '</td></tr>
-                    <tr><td><strong>Author</strong></td><td>' . htmlspecialchars($row['book_author']) . '</td></tr>
-                </table>
-            </div>
-        </div>';
+        $html .= '<tr>
+                    <td>' . htmlspecialchars($row['book_id']) . '</td>
+                    <td>' . htmlspecialchars(ucfirst($row['book_title'])) . '</td>
+                    <td>' . htmlspecialchars(ucfirst($row['book_author'])) . '</td>
+                  </tr>';
     }
+
+    $html .= '</tbody></table>';
 } else {
     $html = "<p style='text-align:center;'>No books found.</p>";
 }

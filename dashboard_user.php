@@ -22,7 +22,7 @@
       <a href="book_catalog_user.php">
         <img src="resources\6.png" alt="Catalog Icon">Book Catalog
       </a>
-      <a href="#">
+      <a href="account_user.php">
         <img src="resources\7.png" alt="Account Icon">Account
       </a>
     </nav>

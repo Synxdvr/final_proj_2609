@@ -28,10 +28,7 @@
   cursor: pointer;
 }
 
-.filters {
-  text-align: right;
-  padding: 0 1rem;
-}
+
 
 .book-card { 
   background: #f9f5f3; 
@@ -73,6 +70,8 @@
 
 .book-details table { /* No change */
   width: 100%;
+  margin-bottom: 40px;
+
   
 }
 
@@ -81,28 +80,32 @@
   padding-right: 0.5rem;
 }
 
-.book-details td:last-child { /* No change */
-  color: #34495e;
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
 }
 
-.add-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color:rgb(40, 128, 77); /* Changed to match your design */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
-  text-align: center;
-  line-height: 50px;
-  color: white;
-  text-decoration: none;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Changed to match your design */
+.book-table th,
+.book-table td {
+    padding: 12px 15px;
+    text-align: left;
 }
 
-.add-button:hover {
-  background-color: #c0392b; /* Changed to match your design */
+.book-table thead {
+    background-color: #131726;
+    color: white;
+}
+
+.book-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.book-table tbody tr:hover {
+    background-color: #f1f1f1;
 }
     </style>
 
@@ -114,7 +117,7 @@
             <a href="dashboard_user.php"><img src="resources/4.png">Dashboard</a>
             <a href="book_borrow_user.php"><img src="resources/5.png">Borrow/Return</a>
             <a href="book_catalog_user.php" class="active"><img src="resources/6.png">Book Catalog</a>
-            <a href="#"><img src="resources/7.png">Account</a>
+            <a href="account_user.php"><img src="resources/7.png">Account</a>
         </nav>
     </div>
 

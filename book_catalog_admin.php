@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booksyte Catalog</title>
+  <title>Booksyte Catalog - Admin</title>
   <link rel="stylesheet" href="bookc_admin.css">
   <script src="/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -24,7 +24,7 @@
       <a href="book_catalog_admin.php" class="active">
         <img src="resources\6.png" alt="Catalog Icon">Book Catalog
       </a>
-      <a href="#">
+      <a href="account_admin.php">
         <img src="resources\7.png" alt="Account Icon">Account
       </a>
     </nav>
