@@ -5,32 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Booksyte Auth</title>
   <link rel="stylesheet" href="signup.css"/>
+  <script src="../js/signup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div class="container" id="container">
     
     <!-- SIGN UP -->
     <div class="form-container sign-up-container">
-      <form>
+      <form id="signupForm">
         <img src="resources\BOOKSYTE IMG (1).png" class="small-logo" alt="Booksyte Logo" />
         <h1>Create Account</h1>
         <div class="parasanames">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+          <input type="text" placeholder="First Name" id="firstName" />
+          <input type="text" placeholder="Last Name" id="lastName" />
         </div>
-        <input type="text" placeholder="Student ID" />
-        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Student ID" id="studentID" />
+        <div class="password-container">
+          <input type="password" placeholder="Password" id="password" />
+          <span class="password-toggle" onclick="togglePassword('password')">
+            <img src="resources/eye.png" alt="Show Password" class="eye-icon" />
+          </span>
+        </div>
         <button type="submit">Create</button>
       </form>
     </div>
 
     <!-- SIGN IN -->
     <div class="form-container sign-in-container">
-      <form>
+      <form id="loginForm">
         <img src="resources\BOOKSYTE IMG (1).png" class="small-logo" alt="Booksyte Logo" />
         <h1>Login</h1>
-        <input type="text" placeholder="ID" />
-        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Student ID" id="studentID-login"/>
+        <div class="password-container">
+          <input type="password" placeholder="Password" id="loginPassword" />
+          <span class="password-toggle" onclick="togglePassword('loginPassword')">
+            <img src="resources/eye.png" alt="Show Password" class="eye-icon" />
+          </span>
+        </div>
         <button type="submit">Login</button>
       </form>
     </div>
