@@ -1,5 +1,4 @@
 <?php include("database/process/db_connection.php");?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -44,7 +43,7 @@
       $date_returned = $_POST['date_returned'];
 
       // Insert into pending_list table
-      $sql = "INSERT INTO pending_list (book_id, book_title, last_name, first_name, date_borrowed, date_returned, status) 
+      $sql = "INSERT INTO request_tbl (book_id, book_title, last_name, first_name, date_borrowed, date_returned, status) 
               VALUES ('$book_id', '$book_title', '$last_name', '$first_name', '$date_borrowed', '$date_returned', 'pending')";
       
       $result = mysqli_query($conn, $sql);
@@ -76,10 +75,11 @@
         <div class="form-group">
           <label for="book-id">BOOK ID</label>
           <input type="text" id="book-id" name="book_id" placeholder="Enter Book ID" required>
+          <button class="fetch-button" onclick="fetchBookDetails()">FETCH</button>
         </div>
         <div class="form-group">
           <label for="book-title">BOOK TITLE</label>
-          <input type="text" id="book-title" name="book_title" placeholder="Enter Book Title" required>
+          <input type="text" id="book-title" name="book_title" placeholder="Enter Book Title">
         </div>
         <div class="form-group">
           <label for="last-name">LAST NAME</label>
