@@ -1,8 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("book-id").addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "");
+  });
+});
+
 function insertBook() {
   const bookId = document.getElementById("book-id").value;
   const bookTitle = document.getElementById("book-title").value;
   const bookAuthor = document.getElementById("author").value;
-
 
   if (!bookId || !bookTitle || !bookAuthor) {
     Swal.fire({

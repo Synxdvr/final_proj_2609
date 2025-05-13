@@ -19,7 +19,7 @@ body {
 
 .sidebar .logo img {
   width: 12vw;
-  height:25vh;
+  height: 25vh;
   margin-bottom: 10px;
 }
 
@@ -43,11 +43,11 @@ body {
   margin-right: 10px;
 }
 
-.sidebar nav a.active{
-  background-color: #4d5d75; 
+.sidebar nav a.active {
+  background-color: #4d5d75;
   color: white;
   font-weight: bold;
-  box-shadow: 0 0 10px #01000D;
+  box-shadow: 0 0 10px #01000d;
 }
 .sidebar nav a:hover {
   background-color: #4d5d75;
@@ -67,7 +67,6 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
 }
 
 .form-group {
@@ -87,7 +86,6 @@ h2 {
   border-radius: 20px;
   outline: none;
   margin-right: 32vw;
-
 }
 
 .form-buttons {
@@ -117,4 +115,61 @@ h2 {
 .form-buttons .delete {
   background-color: #ff6b6b;
   color: white;
+}
+
+/* Add these styles to your existing CSS file */
+
+.input-with-button {
+  display: flex;
+  gap: 10px;
+}
+
+.input-with-button input {
+  flex: 1;
+}
+
+.fetch-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.fetch-button:hover {
+  background-color: #357bd8;
+}
+
+.clear {
+  background-color: #f2c94c;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.clear:hover {
+  background-color: #e6b325;
+}
+
+/* Enhance the existing button styles for consistency */
+.insert,
+.update,
+.delete {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
 }
