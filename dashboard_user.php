@@ -28,53 +28,54 @@
     
     <div class="main-content">
         <h2>LIBRARY MANAGEMENT SYSTEM</h2>
-        <div class="top-section">
-            <div class="welcome-header">
+        
+        <!-- Welcome Header -->
+        <div class="welcome-header">
+            <div>
                 <h3>Welcome back, User!</h3>
-                <div class="profile-icon">
-                    <img src="/api/placeholder/55/55" alt="User Profile">
-                </div>
+                <p>Here's an overview of your library activity</p>
             </div>
-            <div class="dashboard-cards">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 10h9v2H5zm0-4h9v2H5zm0 8h9v2H5zm14-4h-4v-2h4zm0-4h-4V6h4zm0 8h-4v-2h4z"/>
-                        </svg>
-                    </div>
-                    <h4>Books Borrowed</h4>
-                    <p>0</p>
-                    <div class="card-info">Total books in your possession</div>
-                    <div class="card-progress">
-                        <div class="card-progress-bar"></div>
-                    </div>
+            <img class="profile-img" src="resources/7.png" alt="User Profile">
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="uBorrowRet_u.php" class="quick-link primary">Borrow a Book</a>
+            <a href="uBorrowRet_u.php" class="quick-link">Return Book</a>
+            <a href="book_catalog_user.php" class="quick-link">Browse Catalog</a>
+        </div>
+        
+        <!-- Simplified Recommended Books -->
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h3 class="section-title">Recommended for You</h3>
+                <a href="book_catalog_user.php" class="view-all">See All</a>
+            </div>
+            <div class="book-recommendations">
+                <div class="book-item">
+                    <img class="recom-img1" src="resources\The_Hunger_Games.jpg" alt="User Profile">
+                    <div class="book-title">The Hunger Games</div>
+                    <div class="book-author">Suzanne Collins</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM7 11h5v5H7v-5z"/>
-                        </svg>
-                    </div>
-                    <h4>Next Due Date</h4>
-                    <p>N/A</p>
-                    <div class="card-info">No upcoming due dates</div>
-                    <div class="card-progress">
-                        <div class="card-progress-bar"></div>
-                    </div>
+                <div class="book-item">
+                    <img class="recom-img2" src="resources\say.jpg" alt="User Profile">
+                    <div class="book-title">Say you'll Remember Me</div>
+                    <div class="book-author">Abby Jimenez</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v5H9V4zm9 16H6V4h1v5c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V4h1v16z"/>
-                            <path d="M14 15h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
-                        </svg>
-                    </div>
-                    <h4>Recently Returned</h4>
-                    <p>0</p>
-                    <div class="card-info">Books returned in the last 30 days</div>
-                    <div class="card-progress">
-                        <div class="card-progress-bar"></div>
-                    </div>
+                <div class="book-item">
+                    <img class="recom-img3" src="resources\fall.jpg" alt="User Profile">
+                    <div class="book-title">The Fall Risk</div>
+                    <div class="book-author">Abby Jimenez</div>
+                </div>
+                <div class="book-item">
+                    <img class="recom-img4" src="resources\Rain.jpg" alt="User Profile">
+                    <div class="book-title">The Rain in España</div>
+                    <div class="book-author">4Reuminct</div>
+                </div>
+                <div class="book-item">
+                    <img class="recom-img5" src="resources\harry.jpg" alt="User Profile">
+                    <div class="book-title">Harry Potter & The Deathly Hollows</div>
+                    <div class="book-author">J.K. Rowling</div>
                 </div>
             </div>
         </div>

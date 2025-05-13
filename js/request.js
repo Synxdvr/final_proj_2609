@@ -2,6 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("book-id").addEventListener("input", function () {
     this.value = this.value.replace(/\D/g, "");
   });
+
+  // Add event listener for the fetch button
+  document
+    .querySelector(".fetch-button")
+    .addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent form submission
+      fetchBookDetails();
+    });
 });
 
 function handleRequest(action) {
@@ -118,7 +126,7 @@ function clearFormFields() {
   document.getElementById("date-returned").value = "";
 }
 
-// Add function to fetch book details by ID
+// Function to fetch book details by ID
 function fetchBookDetails() {
   const bookID = document.getElementById("book-id").value;
 

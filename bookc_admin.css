@@ -57,73 +57,188 @@ body {
     background-color: #4d5d75;
   }
 
+/* Main Content Styling */
 .main-content {
   flex-grow: 1;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
   padding: 40px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
   margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #1f2f46;
+  position: relative;
+  padding-bottom: 10px;
 }
 
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #28d19c;
+  border-radius: 2px;
+}
+
+/* Form Container */
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
+.form:hover {
+  transform: translateY(-5px);
+}
+
+/* Form Groups */
 .form-group {
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
+  position: relative;
 }
 
 .form-group label {
   width: 150px;
-  margin-right: 5vw;
+  font-weight: 600;
+  color: #1f2f46;
+  font-size: 0.95rem;
+  margin-right: 20px;
+  transition: color 0.3s ease;
 }
 
+.form-group:focus-within label {
+  color: #28d19c;
+}
+
+/* Input Fields */
 .form-group input {
   flex: 1;
-  padding: 12px; 
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  padding: 14px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
   outline: none;
-  margin-right: 32vw;
-  margin-bottom: 20px; 
-  font-size: 16px; 
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  margin-right: 20px;
+  width: 60%;
 }
 
+.form-group input:focus {
+  border-color: #28d19c;
+  box-shadow: 0 0 0 4px rgba(40, 209, 156, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+/* Button Container */
 .form-buttons {
-  margin: 10px 0; /* Adjusted top margin */
   display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
-  gap: 20px; /* Increased spacing between buttons */
-  font-weight: bold;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
+/* Button Styling */
 .form-buttons button {
-  padding: 10px 20px;
+  padding: 12px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  margin-left: 3vw;
-  margin-top: 1vw; /* Adjusted top margin */
-  font-size: 16px; /* Increased font size */
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  text-transform: uppercase;
 }
 
+/* Insert Button */
 .form-buttons .insert {
   background-color: #28d19c;
   color: white;
 }
 
+.form-buttons .insert:hover {
+  background-color: #20b084;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(40, 209, 156, 0.3);
+}
+
+/* Update Button */
 .form-buttons .update {
   background-color: #4d5d75;
   color: white;
 }
 
+.form-buttons .update:hover {
+  background-color: #3a4a60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(77, 93, 117, 0.3);
+}
+
+/* Delete Button */
 .form-buttons .delete {
   background-color: #ff6b6b;
   color: white;
+}
+
+.form-buttons .delete:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Button focus states */
+.form-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(31, 47, 70, 0.2);
+}
+
+/* Active button states */
+.form-buttons button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  
+  .form-group input {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

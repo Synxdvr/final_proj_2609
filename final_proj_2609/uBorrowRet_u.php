@@ -7,8 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/request./js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="uBorrowRet_u.css">
 </head>
 <body>
@@ -76,7 +74,7 @@
       <div class="form">
         <div class="form-group">
           <label for="book-id">BOOK ID</label>
-          <input type="text" id="book-id">
+          <input type="text" id="book-id" name="book_id" placeholder="Enter Book ID" required>
           <button class="fetch-button" onclick="fetchBookDetails()">FETCH</button>
         </div>
         <div class="form-group">
@@ -85,15 +83,15 @@
         </div>
         <div class="form-group">
           <label for="last-name">LAST NAME</label>
-          <input type="text" id="last-name" name="last_name" placeholder="Enter Last Name">
+          <input type="text" id="last-name" name="last_name" placeholder="Enter Last Name" required>
         </div>
         <div class="form-group">
           <label for="first-name">FIRST NAME</label>
-          <input type="text" id="first-name" name="first_name" placeholder="Enter First Name">
+          <input type="text" id="first-name" name="first_name" placeholder="Enter First Name" required>
         </div>
         <div class="form-group">
           <label for="date-borrowed">DATE BORROWED</label>
-          <input type="date" id="date-borrowed" name="date_borrowed">
+          <input type="date" id="date-borrowed" name="date_borrowed" required>
         </div>
         <div class="form-group">
           <label for="date-returned">DATE RETURNED</label>

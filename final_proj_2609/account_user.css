@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* Original sidebar styles - unchanged */
+.sidebar {
+  width: 18vw;
+  background-color: #1f2f46;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar .logo {
+  text-align: center;
+}
+
+.sidebar .logo img {
+  width: 12vw;
+  height: 25vh;
+  margin-bottom: 10px;
+}
+
+.sidebar nav {
+  margin-top: 40px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar nav a.active {
+  background-color: #28d19c;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px #01000D;
+}
+
+.sidebar nav a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background-color: #4d5d75;
+}
+
+/* Improved main content area */
+.main-content {
+  flex-grow: 1;
+  background-color: #f4f4f4;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-content header {
+  margin-bottom: 30px;
+}
+
+.main-content h2 {
+  margin-bottom: 30px;
+  color: #1f2f46;
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+.main-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #28d19c;
+}
+
+.main-content main {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+}
+
+/* Form styling improvements */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #28d19c;
+  box-shadow: 0 0 0 3px rgba(40, 209, 156, 0.15);
+  outline: none;
+}
+
+.form-group input[readonly] {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-group input.editing {
+  background-color: white;
+}
+
+/* Password field styling */
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 41px;
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.password-toggle:hover {
+  color: #1f2f46;
+}
+
+/* Button improvements */
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.form-buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.form-buttons i {
+  margin-right: 8px;
+}
+
+.form-buttons .edit {
+  background-color: #28d19c;
+  color: white;
+}
+
+.form-buttons .edit:hover {
+  background-color: #24bc8c;
+  box-shadow: 0 4px 8px rgba(40, 209, 156, 0.3);
+}
+
+.form-buttons .update {
+  background-color: #4d5d75;
+  color: white;
+}
+
+.form-buttons .update:hover {
+  background-color: #3d4d65;
+  box-shadow: 0 4px 8px rgba(77, 93, 117, 0.3);
+}
+
+.form-buttons .delete {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.form-buttons .delete:hover {
+  background-color: #e05252;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Logout button */
+.main-content footer .logout {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.main-content footer .logout:hover {
+  background-color: #e05252;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.main-content footer .logout i {
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .sidebar .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .main-content footer .logout {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
