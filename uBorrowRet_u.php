@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/request.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <link rel="stylesheet" href="uBorrowRet_u.css">
 </head>
@@ -84,19 +85,19 @@
         </div>
         <div class="form-group">
           <label for="book-title">BOOK TITLE</label>
-          <input type="text" id="book-title" name="book_title" placeholder="Enter Book Title" required>
+          <input type="text" id="book-title" name="book_title" placeholder="Enter Book Title">
         </div>
         <div class="form-group">
           <label for="last-name">LAST NAME</label>
-          <input type="text" id="last-name" name="last_name" placeholder="Enter Last Name" required>
+          <input type="text" id="last-name" name="last_name" placeholder="Enter Last Name">
         </div>
         <div class="form-group">
           <label for="first-name">FIRST NAME</label>
-          <input type="text" id="first-name" name="first_name" placeholder="Enter First Name" required>
+          <input type="text" id="first-name" name="first_name" placeholder="Enter First Name">
         </div>
         <div class="form-group">
           <label for="date-borrowed">DATE BORROWED</label>
-          <input type="date" id="date-borrowed" name="date_borrowed" required>
+          <input type="date" id="date-borrowed" name="date_borrowed">
         </div>
         <div class="form-group">
           <label for="date-returned">DATE RETURNED</label>
