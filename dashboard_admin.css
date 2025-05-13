@@ -1,120 +1,245 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    background-color: #f8f9fa;
 }
 
 .sidebar {
-  width: 18vw;
-  background-color: #1f2f46;
-  color: white;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
+    width: 18vw;
+    background-color: #1f2f46;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-.sidebar .logo {
-  text-align: center;
-}
+  .sidebar .logo {
+    text-align: center;
+  }
 
-.sidebar .logo img {
-  width: 12vw;
-  height:25vh;
-  margin-bottom: 10px;
-}
+  .sidebar .logo img {
+    width: 12vw;
+    height:25vh;
+    margin-bottom: 10px;
+  }
 
-.sidebar nav {
-  margin-top: 40px;
-}
+  .sidebar nav {
+    margin-top: 40px;
+  }
 
-.sidebar nav a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
+  .sidebar nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.sidebar nav a img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
+  .sidebar nav a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 
-.sidebar nav a.active{
-  background-color: #4d5d75; 
-  color: white;
-  font-weight: bold;
-  box-shadow: 0 0 10px #01000D;
-}
-.sidebar nav a:hover {
-  background-color: #4d5d75;
-}
+  .sidebar nav a.active {
+    background-color: #4d5d75;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #01000D;
+  }
+  .sidebar nav a:hover {
+    background-color: #4d5d75;
+  }
 
 .main-content {
-  flex-grow: 1;
-  background-color: #f4f4f4;
-  padding: 40px;
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
 }
 
-h2 {
-  margin-bottom: 30px;
+.main-content > h2 {
+    font-size: 2em;
+    color: #2D3748;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.top-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.welcome-header h3 {
+    font-size: 1.8em;
+    color: #1A202C;
+    font-weight: 600;
+}
+
+.profile-icon img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 3px solid #4A5568;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-cards {
+    display: grid;
+    /* Explicitly define 3 columns and 2 rows */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.big-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    padding: 50px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Place it in the center and make it span 2 columns */
+    grid-column: 1 / span 3; /* Span full width */
+    grid-row: 3;
+    justify-self: center;
+    width: 66%; /* Adjust width to be less than full so it's centered visually */
+}
+
+
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    margin-bottom: 15px;
+    color: #4A5568;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 2em;
+    font-weight: 700;
+    color: #28d19c;
+    margin-top: auto;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    margin-top: 30px;
 }
 
 .form-group {
-  display: flex;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .form-group label {
-  width: 150px;
-  margin-right: 5vw;
+    width: auto;
+    margin-right: 0;
+    font-weight: 500;
+    color: #2D3748;
 }
 
 .form-group input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  outline: none;
-  margin-right: 32vw;
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    outline: none;
+    margin-right: 0;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
+.form-group input:focus {
+    border-color: #28d19c;
+    box-shadow: 0 0 0 3px rgba(40, 209, 156, 0.2);
 }
 
 .form-buttons {
-  margin: 20px 0;
+    margin: 25px 0 10px 0;
+    display: flex;
+    gap: 15px;
 }
 
 .form-buttons button {
-  padding: 10px 20px;
-  margin-right: 2vw;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 2.5vw;
-  margin-top: 3vw;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.95em;
+}
+
+.form-buttons button:hover {
+    transform: translateY(-2px);
 }
 
 .form-buttons .insert {
-  background-color: #28d19c;
-  color: white;
+    background-color: #28d19c;
+    color: white;
+}
+
+.form-buttons .insert:hover {
+    background-color: #24b88a;
 }
 
 .form-buttons .update {
-  background-color: #4d5d75;
-  color: white;
+    background-color: #4A5568;
+    color: white;
+}
+
+.form-buttons .update:hover {
+    background-color: #2D3748;
 }
 
 .form-buttons .delete {
-  background-color: #ff6b6b;
-  color: white;
+    background-color: #F56565;
+    color: white;
+}
+
+.form-buttons .delete:hover {
+    background-color: #E53E3E;
 }

@@ -26,6 +26,7 @@ body {
   max-width: 100%;
   min-height: 600px;
   display: flex;
+  opacity: 90%;
 }
 
 .form-container {
