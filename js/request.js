@@ -134,48 +134,48 @@ function fetchBookDetails() {
   $.ajax({
     url: "../database/process/fetch_request.php",
     method: "POST",
-    data: { bookID },
-    success: function (response) {
-      try {
-        const data = JSON.parse(response);
-        if (data.book) {
-          document.getElementById("book-title").value = data.book.title || "";
+    data: { bookID: bookID },
+    dataType: "json",
+    success: function (data) {
+      console.log("Received data:", data);
 
-          // Check if there's an existing request for this book
-          if (data.request) {
-            document.getElementById("last-name").value =
-              data.request.last_name || "";
-            document.getElementById("first-name").value =
-              data.request.first_name || "";
-            document.getElementById("date-borrowed").value =
-              data.request.date_borrowed || "";
-            document.getElementById("date-returned").value =
-              data.request.date_returned || "";
-          }
+      if (data.book) {
+        document.getElementById("book-title").value =
+          data.book.book_title || "";
+
+        // Check if there's an existing request for this book
+        if (data.request) {
+          document.getElementById("last-name").value =
+            data.request.last_name || "";
+          document.getElementById("first-name").value =
+            data.request.first_name || "";
+          document.getElementById("date-borrowed").value =
+            data.request.date_borrowed || "";
+          document.getElementById("date-returned").value =
+            data.request.date_returned || "";
+        } else {
+          // Clear borrower fields if no existing request
+          document.getElementById("last-name").value = "";
+          document.getElementById("first-name").value = "";
+          document.getElementById("date-borrowed").value = "";
+          document.getElementById("date-returned").value = "";
         }
-      } catch (e) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Failed to parse book data",
-        });
       }
     },
     error: function (xhr) {
+      let errorMessage = "Book not found";
       try {
         const response = JSON.parse(xhr.responseText);
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: response.error || "Book not found",
-        });
+        errorMessage = response.error || errorMessage;
       } catch (e) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "An unexpected error occurred",
-        });
+        // Use default error message
       }
+
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: errorMessage,
+      });
     },
   });
 }
