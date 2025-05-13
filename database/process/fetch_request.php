@@ -2,6 +2,8 @@
 
 require_once 'db_connection.php';
 
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $bookID = isset($_POST['bookID']) ? $_POST['bookID'] : '';
 
@@ -14,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response = [];
 
     // Check if book exists and get its details
-    $bookStmt = $conn->prepare("SELECT book_id, title FROM books_tbl WHERE book_id = ?");
+    $bookStmt = $conn->prepare("SELECT book_id, book_title FROM books_tbl WHERE book_id = ?");
     $bookStmt->bind_param("i", $bookID);
     $bookStmt->execute();
     $bookResult = $bookStmt->get_result();
