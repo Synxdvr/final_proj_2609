@@ -31,7 +31,7 @@
 
     <div class="main-content">
         <header>
-            <h2>Account</h2>
+            <h2>ACCOUNT</h2>
         </header>
         <main>
             <div class="form">
