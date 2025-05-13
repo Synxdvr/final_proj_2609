@@ -43,7 +43,7 @@
                         </svg>
                     </div>
                     <h4>Books Borrowed</h4>
-                    <p>0</p>
+                    <p id="book-count"><?php echo $totalBooks; ?></p>
                     <div class="card-info">Total books in your possession</div>
                     <div class="card-progress">
                         <div class="card-progress-bar"></div>
@@ -55,8 +55,8 @@
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM7 11h5v5H7v-5z"/>
                         </svg>
                     </div>
-                    <h4>Next Due Date</h4>
-                    <p>N/A</p>
+                    <h4>Total Requests</h4>
+                        <p id="Requests-count"><?php echo $totalRequest; ?></p>
                     <div class="card-info">No upcoming due dates</div>
                     <div class="card-progress">
                         <div class="card-progress-bar"></div>

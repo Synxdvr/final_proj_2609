@@ -1,9 +1,9 @@
 body{
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            display: flex;
-            background-color: #f8f9fa;
-        }
+   margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;  
+    display: flex;
+    background-color: #f8f9fa;
+}
 
 .sidebar {
     width: 18vw;

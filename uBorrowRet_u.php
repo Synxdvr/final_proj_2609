@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/request.js"></script>
+
   <link rel="stylesheet" href="uBorrowRet_u.css">
 </head>
 <body>
@@ -75,7 +77,10 @@
       <div class="form">
         <div class="form-group">
           <label for="book-id">BOOK ID</label>
-          <input type="text" id="book-id" name="book_id" placeholder="Enter Book ID" required>
+          <div class="input-with-button">
+            <input type="text" id="book-id">
+            <button class="fetch-button" onclick="fetchBookDetails()">FETCH</button>
+          </div>
         </div>
         <div class="form-group">
           <label for="book-title">BOOK TITLE</label>

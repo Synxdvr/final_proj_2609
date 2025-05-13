@@ -71,18 +71,38 @@
             </div>
                <div class="dashboard-cards">
                     <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 10h9v2H5zm0-4h9v2H5zm0 8h9v2H5zm14-4h-4v-2h4zm0-4h-4V6h4zm0 8h-4v-2h4z"/>
+                            </svg>
+                        </div>
                         <h4>Total Books</h4>
                         <p id="book-count"><?php echo $totalBooks; ?></p>
+                        <div class="card-info">Total books in your possession</div>
+                        <div class="card-progress">
+                            <div class="card-progress-bar"></div>
+                        </div>
                     </div>
 
                   <div class="card">
-                      <h4>Books Borrowed</h4>
-                      <p>0</p>
-                  </div>
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM7 11h5v5H7v-5z"/>
+                        </svg>
+                    </div>
+                    <h4>Total Requests</h4>
+                        <p id="Requests-count"><?php echo $totalRequest; ?></p>
+                    <div class="card-info">No of Pending Requests</div>
+                    <div class="card-progress">
+                        <div class="card-progress-bar"></div>
+                    </div>
+                </div>
+
                   <div class="card">
                         <h4>Total Requests</h4>
-                        <p id="Requests-count"><?php echo $totalRequest; ?></p>
+                        <p>N/A</p>
                     </div>
+
                   <div class="big-card">
                       <h4>Books Borrowed per Month</h4>
                       <p>0</p>
