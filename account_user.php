@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account - User</title>
     <link rel="stylesheet" href="account_user.css">
+    <script src="js/account.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -36,6 +39,10 @@
         <main>
             <div class="form">
                 <div class="form-group">
+                    <label for="student-id">Student ID</label>
+                    <input type="text" id="student-id" placeholder="">
+                </div>
+                <div class="form-group">
                     <label for="first-name">First Name</label>
                     <input type="text" id="first-name" placeholder="">
                 </div>
@@ -44,11 +51,11 @@
                     <input type="text" id="last-name" placeholder="">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="">
                 </div>
                 <div class="form-buttons">
-                    <button class="edit">EDIT</button>
+                    <button class="edit" onclick="updateUser()">EDIT</button>
                 </div>
             </div>
         </main>
