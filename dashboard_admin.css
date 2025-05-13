@@ -64,7 +64,8 @@ body {
 .main-content {
     flex-grow: 1;
     background-color: #f8f9fa;
-    padding: 30px 40px;
+    padding: 
+    0px 40px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

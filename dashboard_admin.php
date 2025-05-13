@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Admin</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="dashboard_admin.css"> </head>
-<body>
-    <?php
+<?php
     // Include database connection
     include 'database/process/db_connection.php';
     
@@ -23,9 +14,32 @@
     } catch (Exception $e) {
         // If there's an error, leave count at 0
     }
+
+    // Get total requests count
+    $totalRequest = 0;
+    try {
+        $sql = "SELECT COUNT(*) as total FROM request_tbl";
+        $result = $conn->query($sql);
+        
+        if ($result && $row = $result->fetch_assoc()) {
+            $totalRequest = $row['total'];
+        }
+    } catch (Exception $e) {
+        // If there's an error, leave count at 0
+    }
     
     $conn->close();
-    ?>
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="dashboard_admin.css"> </head>
+<body>
     <div class="sidebar">
         <div class="logo">
             <img src="resources/BOOKSYTE.png" alt="Booksyte Logo">
@@ -66,9 +80,9 @@
                       <p>0</p>
                   </div>
                   <div class="card">
-                      <h4>Total Requests</h4>
-                      <p>0</p>
-                  </div>
+                        <h4>Total Requests</h4>
+                        <p id="Requests-count"><?php echo $totalRequest; ?></p>
+                    </div>
                   <div class="big-card">
                       <h4>Books Borrowed per Month</h4>
                       <p>0</p>

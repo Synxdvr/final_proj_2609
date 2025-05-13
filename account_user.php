@@ -31,7 +31,7 @@
 
     <div class="main-content">
         <header>
-            <h2>Account</h2>
+            <h2>ACCOUNT</h2>
         </header>
         <main>
             <div class="form">
@@ -53,7 +53,7 @@
             </div>
         </main>
         <footer>
-            <button class="logout" onclick="window.location.href='logout.php'">LOGOUT</button>
+            <button class="logout" onclick="window.location.href='signup.php'">LOGOUT</button>
         </footer>
     </div>
 </body>

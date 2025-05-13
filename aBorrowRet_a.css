@@ -5,53 +5,57 @@ body {
 }
 
 .sidebar {
-  width: 18vw;
-  background-color: #1f2f46;
-  color: white;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
+    width: 18vw;
+    background-color: #1f2f46;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+  }
 
-.sidebar .logo {
-  text-align: center;
-}
+  .sidebar .logo {
+    text-align: center;
+  }
 
-.sidebar .logo img {
-  width: 12vw;
-  height: 25vh;
-  margin-bottom: 10px;
-}
+  .sidebar .logo img {
+    width: 12vw;
+    height:25vh;
+    margin-bottom: 10px;
+  }
 
-.sidebar nav {
-  margin-top: 40px;
-}
+  .sidebar nav {
+    margin-top: 40px;
+  }
 
-.sidebar nav a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
+  .sidebar nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.sidebar nav a img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
+  .sidebar nav a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 
-.sidebar nav a.active {
-  background-color: #4d5d75;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0 0 10px #01000d;
-}
-.sidebar nav a:hover {
-  background-color: #4d5d75;
-}
+  .sidebar nav a.active {
+    background-color: #4d5d75;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #01000D;
+  }
+  .sidebar nav a:hover {
+    background-color: #4d5d75;
+  }
 
 .main-content {
   flex-grow: 1;

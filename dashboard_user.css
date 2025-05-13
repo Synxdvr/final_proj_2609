@@ -5,73 +5,58 @@ body{
             background-color: #f8f9fa;
         }
 
-        .sidebar {
-            width: 260px;
-            background-color: #1A202C;
-            color: #E2E8F0;
-            height: 100vh;
-            padding: 25px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        }
+.sidebar {
+    width: 18vw;
+    background-color: #1f2f46;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+  }
 
-        .sidebar .logo {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+  .sidebar .logo {
+    text-align: center;
+  }
 
-        .sidebar .logo img {
-            width: 150px;
-            height: auto;
-            max-height: 200px;
-        }
+  .sidebar .logo img {
+    width: 12vw;
+    height:25vh;
+    margin-bottom: 10px;
+  }
 
-        .sidebar nav {
-            margin-top: 20px;
-            flex-grow: 1;
-        }
+  .sidebar nav {
+    margin-top: 40px;
+  }
 
-        .sidebar nav a {
-            display: flex;
-            align-items: center;
-            color: #A0AEC0;
-            text-decoration: none;
-            margin: 10px 0;
-            padding: 12px 15px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            font-weight: 500;
-        }
+  .sidebar nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-        .sidebar nav a img {
-            width: 22px;
-            height: 22px;
-            margin-right: 15px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
+  .sidebar nav a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 
-        .sidebar nav a:hover {
-            background-color: #2D3748;
-            color: #FFFFFF;
-        }
-
-        .sidebar nav a:hover img {
-            opacity: 1;
-        }
-
-        .sidebar nav a.active {
-            background-color: #4A5568;
-            color: #FFFFFF;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
-
-        .sidebar nav a.active img {
-            opacity: 1;
-        }
+  .sidebar nav a.active {
+    background-color: #4d5d75;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #01000D;
+  }
+  .sidebar nav a:hover {
+    background-color: #4d5d75;
+  }
 
         .main-content {
             flex-grow: 1;
