@@ -52,7 +52,7 @@
             <div class="welcome-header">
                 <h3>Welcome back, Admin!</h3>
                 <div class="profile-icon">
-                    <img src="" alt="User Profile">
+                    <img src="resources\7.png" alt="User Profile">
                 </div>
             </div>
                <div class="dashboard-cards">
