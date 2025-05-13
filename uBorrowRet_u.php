@@ -5,76 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booksyte Borrow/Return</title>
   <link rel="stylesheet" href="uBorrowRet_u.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body>
-  <div class="sidebar">
-    <div class="logo">
-      <img src="resources/BOOKSYTE.png" alt="Booksyte Logo">
+    <script src="/js/request.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="resources\BOOKSYTE.png" alt="Booksyte Logo">
+      </div>
+      <nav>
+        <a href="dashboard_admin.php">
+          <img src="resources/4.png" alt="Dashboard Icon">Dashboard
+        </a>
+        <a href="aBorrowRet_a.php" class="active">
+          <img src="resources/5.png" alt="Borrow/Return Icon">Borrow/Return
+        </a>
+        <a href="book_catalog_admin.php">
+          <img src="resources/6.png" alt="Catalog Icon">Book Catalog
+        </a>
+        <a href="account_admin.php">
+          <img src="resources/7.png" alt="Account Icon">Account
+        </a>
+      </nav>
     </div>
-    <nav>
-      <a href="dashboard_user.php">
-        <img src="resources/4.png" alt="Dashboard Icon">Dashboard
-      </a>
-      <a href="uBorrowRet_u.php">
-  <img src="resources\5.png" alt="Borrow/Return Icon">Borrow/Return
-</a>
-      <a href="book_borrow_user.php">
-        <img src="resources/6.png" alt="Catalog Icon">Book Catalog
-      </a>
-      <a href="account_user.php">
-        <img src="resources/7.png" alt="Account Icon">Account
-      </a>
-    </nav>
-  </div>
-
-  <div class="main-content">
-    <h2>BORROW/RETURN</h2>
-    <form method="POST" id="borrowForm">
+    <div class="main-content">
+      <h2>BORROW/RETURN</h2>
       <div class="form">
         <div class="form-group">
           <label for="book-id">BOOK ID</label>
-          <input type="text" id="book-id" name="book_id" required>
+          <div class="input-with-button">
+            <input type="text" id="book-id">
+            <button class="fetch-button" onclick="fetchBookDetails()">FETCH</button>
+          </div>
         </div>
         <div class="form-group">
           <label for="book-title">BOOK TITLE</label>
-          <input type="text" id="book-title" name="book_title" required>
+          <input type="text" id="book-title">
         </div>
         <div class="form-group">
           <label for="last-name">LAST NAME</label>
-          <input type="text" id="last-name" name="last_name" required>
+          <input type="text" id="last-name">
         </div>
         <div class="form-group">
           <label for="first-name">FIRST NAME</label>
-          <input type="text" id="first-name" name="first_name" required>
+          <input type="text" id="first-name">
         </div>
         <div class="form-group">
           <label for="date-borrowed">DATE BORROWED</label>
-          <input type="date" id="date-borrowed" name="date_borrowed" required>
+          <input type="date" id="date-borrowed">
         </div>
         <div class="form-group">
           <label for="date-returned">DATE RETURNED</label>
-          <input type="date" id="date-returned" name="date_returned">
+          <input type="date" id="date-returned">
         </div>
         <div class="form-buttons">
-          <button type="submit" class="insert">REQUEST</button>
+          <button class="insert" onclick="insertRequest()">REQUEST</button>
         </div>
-      </div>
-    </form>
-  </div>
-
-  <script>
-    document.getElementById('borrowForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      Swal.fire({
-        title: 'Success!',
-        text: 'Request submitted successfully.',
-        icon: 'success',
-        confirmButtonText: 'OK'
-      });
-      // Optionally submit the form after alert:
-      // this.submit();
-    });
-  </script>
-</body>
+      </div> 
+    </div>
+  </body>
 </html>

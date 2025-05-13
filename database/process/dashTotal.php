@@ -11,4 +11,21 @@ if ($result && $row = $result->fetch_assoc()) {
 $conn->close();
 
 echo $totalBooks;
+
+
+$sql = "SELECT COUNT(*) as total FROM request_tbl";
+$result = $conn->query($sql);
+
+$totalRequest = 0;
+if ($result && $row = $result->fetch_assoc()) {
+    $totalRequest = $row['total'];
+}
+$conn->close();
+
+echo $totalRequest;
+
+
+
+
+
 ?>

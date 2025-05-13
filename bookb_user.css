@@ -11,22 +11,26 @@ body {
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
   }
-  
+
   .sidebar .logo {
     text-align: center;
   }
-  
+
   .sidebar .logo img {
     width: 12vw;
-    height: 25vh;
+    height:25vh;
     margin-bottom: 10px;
   }
-  
+
   .sidebar nav {
     margin-top: 40px;
   }
-  
+
   .sidebar nav a {
     display: flex;
     align-items: center;
@@ -36,20 +40,19 @@ body {
     padding: 10px;
     border-radius: 5px;
   }
-  
+
   .sidebar nav a img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
   }
-  
+
   .sidebar nav a.active {
-    background-color: #4d5d75; 
+    background-color: #4d5d75;
     color: white;
     font-weight: bold;
     box-shadow: 0 0 10px #01000D;
   }
-  
   .sidebar nav a:hover {
     background-color: #4d5d75;
   }
