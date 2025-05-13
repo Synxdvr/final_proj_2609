@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssss", $firstName, $lastName, $studentID, $hashedPassword);
 
     if ($stmt->execute()) {
-        echo json_encode(['success' => true, 'message' => 'User registered successfully']);
+        echo json_encode(['success' => 'User registered successfully']);
     } else {
         http_response_code(500);
         echo json_encode(['error' => 'Registration failed: ' . $conn->error]);
