@@ -115,7 +115,7 @@
         <div class="logo"><img src="resources/BOOKSYTE.png" alt="Booksyte Logo"></div>
         <nav>
             <a href="dashboard_user.php"><img src="resources/4.png">Dashboard</a>
-            <a href="book_borrow_user.php"><img src="resources/5.png">Borrow/Return</a>
+            <a href="uBorrowRet_u.php"><img src="resources/5.png">Borrow/Return</a>
             <a href="book_catalog_user.php" class="active"><img src="resources/6.png">Book Catalog</a>
             <a href="account_user.php"><img src="resources/7.png">Account</a>
         </nav>

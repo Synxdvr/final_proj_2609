@@ -1,4 +1,3 @@
-<!-- filepath: c:\Users\PC\Downloads\FinalProj - AppDev\FinalProj - AppDev\uBorrowRet.php -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,16 +14,16 @@
         <img src="resources\BOOKSYTE.png" alt="Booksyte Logo">
       </div>
       <nav>
-        <a href="dashboard_admin.php">
+        <a href="dashboard_user.php">
           <img src="resources/4.png" alt="Dashboard Icon">Dashboard
         </a>
-        <a href="aBorrowRet_a.php" class="active">
+        <a href="uBorrowRet_u.php" class="active">
           <img src="resources/5.png" alt="Borrow/Return Icon">Borrow/Return
         </a>
-        <a href="book_catalog_admin.php">
+        <a href="book_catalog_user.php">
           <img src="resources/6.png" alt="Catalog Icon">Book Catalog
         </a>
-        <a href="account_admin.php">
+        <a href="account_user.php">
           <img src="resources/7.png" alt="Account Icon">Account
         </a>
       </nav>

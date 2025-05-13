@@ -15,19 +15,21 @@
         // If there's an error, leave count at 0
     }
 
-            $sql = "SELECT COUNT(*) as total FROM request_tbl";
+    // Get total requests count
+    $totalRequest = 0;
+    try {
+        $sql = "SELECT COUNT(*) as total FROM request_tbl";
         $result = $conn->query($sql);
-
-        $totalRequest = 0;
+        
         if ($result && $row = $result->fetch_assoc()) {
             $totalRequest = $row['total'];
         }
-
-        echo $totalRequest;
+    } catch (Exception $e) {
+        // If there's an error, leave count at 0
+    }
     
     $conn->close();
-
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
